@@ -251,6 +251,9 @@ Sidebar
 	/* add later */
 	transform: translateX(-100%);
 }
+.show-sidebar {
+	transform: translateX(0);
+}
 .sidebar-links {
 	text-align: center;
 }
@@ -284,13 +287,13 @@ Sidebar
 .close-btn {
 	position: absolute;
 	top: 1rem;
-	left: 1rem;
+	right: 1rem;
 	font-size: 3rem;
 	background: transparent;
 	border: transparent;
 	transition: var(--transition);
-  color: #bb2525;
-  cursor: pointer;
+	color: #bb2525;
+	cursor: pointer;
 }
 .close-btn:hover {
 	color: #e66b6b;
