@@ -479,7 +479,41 @@ Services
 Projects
 ===============
 */
+.projects-text {
+	width: 85vw;
+	max-width: 30rem;
+	margin: 0 auto;
+}
 
+.project {
+	position: relative;
+	background: var(--clr-primary-5);
+	border-radius: var(--radius);
+	margin-bottom: 2rem;
+}
+.project-info {
+	text-align: center;
+	color: var(--clr-white);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: var(--transition);
+	opacity: 0;
+}
+.project-info p {
+	text-transform: capitalize;
+	color: var(--clr-white);
+}
+.project:hover .project-info {
+	opacity: 1;
+}
+.project-img {
+	transition: var(--transition);
+	border-radius: var(--radius);
+	height: 15rem;
+	object-fit: cover;
+}
 /*
 =============== 
 Connect
