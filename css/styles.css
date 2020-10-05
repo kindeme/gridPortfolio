@@ -501,18 +501,39 @@ Projects
 	transition: var(--transition);
 	opacity: 0;
 }
+
+.project:hover .project-info {
+	opacity: 1;
+}
 .project-info p {
 	text-transform: capitalize;
 	color: var(--clr-white);
-}
-.project:hover .project-info {
-	opacity: 1;
 }
 .project-img {
 	transition: var(--transition);
 	border-radius: var(--radius);
 	height: 15rem;
 	object-fit: cover;
+	position: relative;
+}
+.project:hover .project-img {
+	opacity: 0.1;
+}
+.project::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	border: 0.25rem solid var(--clr-white);
+	border-radius: var(--radius);
+	transition: var(--transition);
+	opacity: 0;
+}
+.project:hover::after {
+	opacity: 1;
+	transform: scale(0.8);
 }
 /*
 =============== 
