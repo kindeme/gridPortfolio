@@ -753,12 +753,13 @@ Timeline
 	border-top: 0;
 }
 .timeline-item:last-child {
-	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	border-bottom: 0;
 }
-.number{
+.number {
 	position: absolute;
 	top: 50%;
-	transform: translateX(-50%,-50%);
+	transform: translateX(-50%, -50%);
 	margin-bottom: 0;
 	background: var(--clr-primary-5);
 	width: 2rem;
@@ -769,12 +770,28 @@ Timeline
 	color: var(--clr-primary-1);
 	font-weight: bold;
 }
-.timeline-item:nth-child(even)
+.timeline-item:nth-child(even) .number {
+	left: 0;
+}
+.timeline-item:nth-child(odd) .number {
+	right: 0;
+	transform: translateX(50%, -50%);
+}
 /*
 =============== 
 Blog
 ===============
 */
+.blog{
+	background: var(--clr-grey-10);
+}
+.card{
+	height: 27rem;
+	position: relative;
+	/* more explanation in css aniation course on my computer */
+	perspective: 1500px;
+
+}
 
 /*
 =============== 
